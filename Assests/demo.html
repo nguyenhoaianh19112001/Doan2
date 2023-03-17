@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <section class="body">
+            <div class="grid wide container">
+                <div class="row list__head">
+                    <div class="col l-2-4">
+                        <div class="list__head-item">
+                            Sản phẩm
+                        </div>
+                    </div>
+                    <div class="col l-2-4">
+                        <div class="list__head-item">
+                            Giá
+                        </div>
+                    </div>
+                    <div class="col l-2-4">
+                        <div class="list__head-item">
+                            Số lượng
+                        </div>
+                    </div>
+                    <div class="col l-2-4">
+                        <div class="list__head-item">
+                            Tổng
+                        </div>
+                    </div>
+                    <div class="col l-2-4">
+                        <div class="list__head-item" style="border-right: none;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card__content">
+                </div>
+            </div>
+            <div class="grid wide">
+                <div class="row buy">
+                    <div class="col l-2-4">
+                        <div class="list__head-item remove in">
+                            <a href="../Assests/Thanhtoan.html">Thanh Toán</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+    <div class="modal__print">
+        <div class="modal__overlay-print"></div>
+        <div class="modal__body">
+            <!-- form login -->
+            <form class="form__print">
+                <div class="print__title">
+                    <h2>
+                        <span></span>
+                    </h2>
+                </div>
+                <div class="info">
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                </div>
+                <div class="hang">
+                    <div class="title__hang">
+                        <div class="title__hang-item">
+                            Sản phẩm
+                        </div>
+                        <div class="title__hang-item">
+                            Giá
+                        </div>
+                        <div class="title__hang-item">
+                            Số lượng
+                        </div>
+                        <div class="title__hang-item">
+                            Thành tiền
+                        </div>
+                    </div>
+
+                    <div class="tong">
+                        <div class="tong__title">
+                            Tổng tiền
+                        </div>
+                        <div class="tong__tien">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form__end">
+                    <div class="user">
+                        Khách Hàng
+                    </div>
+                    <div class="user">
+                        Nhân viên bán Hàng
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="../js/Giohang.js"></script>
+    <script>
+        var list = JSON.parse(localStorage.getItem('cart'));
+
+        function LoadData() {
+            var str = "";
+            var n = 0;
+            var t = 0;
+            for (x of list) {
+                str += `  <div class="row item_card">
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                <img class="img__card" src="${x.image}" alt="">
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                ${x.price}
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                <input value="` + x.quantity + `" type="number" name="points" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                ${x.price * x.quantity}
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div onclick="Xoa(` + x.id + `)" class="list__head-item remove" style="border-right: none;">
+                                Xoá khỏi giỏ
+                            </div>
+                        </div>
+                    </div>
+                 `;
+            }
+            document.querySelector(".card__content").innerHTML = str;
+            const btn__sl = document.querySelectorAll('.list__head-item input');
+            btn__sl.forEach((btn, index) => {
+                    btn.onblur = function() {
+                        list[index].quantity = Number(btn.value);
+                        LoadData();
+                        updateCart();
+                    }
+                })
+                /* $("#spTong").text(t); */
+        }
+
+        function XoaCart() {
+            localStorage.setItem('cart', null);
+            location.reload();
+        }
+
+        function Xoa(id) {
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0) {
+                list.splice(index, 1);
+            }
+            LoadData();
+        }
+
+        function updateQuantity(id) {
+            var quantity = Number($('#q_' + id).val());
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0 && list[index].quantity >= 1) {
+                list[index].quantity = quantity;
+            }
+            LoadData();
+        }
+
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(list));
+            console.log('xong');
+        }
+        LoadData();
+    </script>
+</body>
+
+</html>

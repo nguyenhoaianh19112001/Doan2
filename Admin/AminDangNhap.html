@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Đăng Nhập</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--chèn link icon -->
+    <link rel="stylesheet" type="text/css" href="../Admin/AdminDangNhap.css">
+    <script src="https://kit.fontawesome.com/6d9e8c4e41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="login-page">
+        <div class="form">
+
+            <img src="../img/anhdoan/hi.jpg" alt="Avata" style="border-radius: 50%;;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            overflow: hidden;">
+
+            <form class="register-form">
+                <input type="text" placeholder="name" />
+                <input type="password" placeholder="password" />
+                <input type="text" placeholder="email address" />
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <input type="text" placeholder="username" />
+                <input type="password" placeholder="password" />
+                <button><a href="../Admin/QuanTri.html" class="login">login</a></button>
+                <!--a href="../Admin/QuanTri.html" class="login">ĐĂNG NHẬP</a-->
+                <p class="message">Not registered? <a href="../Admin/AminDangKy.html">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        $('.message a').click(function() {
+            $('form').animate({
+                height: "toggle",
+                opacity: "toggle"
+            }, "slow");
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            var nhomk = document.querySelector('.nhomk');
+            var otich = document.querySelector('.otich');
+            nhomk.addEventListener('click', function() {
+                otich.classList.toggle('dk');
+            })
+            var mat = document.querySelector('.mat');
+            var tk = document.getElementById('tk');
+            var mk = document.getElementById('mk');
+            mat.addEventListener('click', function() {
+                var xm = document.querySelector('.xm');
+                mat.classList.toggle('xm');
+                if (!xm) {
+                    mk.attributes[0].value = "text";
+                } else
+                    mk.attributes[0].value = "password";
+            })
+            var nut_dangnhap = document.querySelector('.login');
+            nut_dangnhap.addEventListener('click', function() {
+                if (tk.value == 'admin' && mk.value == 'admin') {
+                    this.attributes[0].value = "Admin.html";
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

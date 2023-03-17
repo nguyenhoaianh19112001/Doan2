@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Giỏ Hàng</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--chèn link icon -->
+    <link rel="stylesheet" type="text/css" href="../css/Giohang.css">
+    <script src="https://kit.fontawesome.com/6d9e8c4e41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="box">
+            <a href="#"><img class="logo" src="../img/anhdoan/anhlogo01.jpg" alt="logo"></a>
+            <div class="Email">
+                <input class="search" type="text" placeholder="Tìm Kiếm...">
+                <a href="#" class="btn7"><i class="fas fa-search"></i></a>
+            </div>
+            <ul class="main-nav">
+                <li><a href="#"><i class="fas fa-shopping-cart"></i>  Giỏ hàng </a></li>
+                <li class="contact-item">
+                    <a href="../Assests/dangnhap.html" class="icon_user">
+                        <i class="fas fa-user-friends"></i>
+                        <span> Đăng nhập</span>
+                    </a>
+                    <a href="../Assests/dangky.html">/Đăng ký</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav">
+            <ul class="menu">
+
+                <li class="menu__item">
+                    <a href="../Assests/Hangmoi.html">HÀNG MỚI</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../Assests/Dam.html">ĐẦM  <i class="fas fa-angle-down"></i></a>
+                    <ul class="menu-con">
+                        <li class="item-con">
+                            <a href="#">Đầm xòe</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Đầm suông</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Đầm ôm</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a href="../Assests/Ao.html">ÁO  <i class="fas fa-angle-down"></i></a>
+                    <ul class="menu-con">
+                        <li class="item-con">
+                            <a href="#">Áo sơ mi</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Áo vest</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Áo thun</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a href="../Assests/Quan.html">QUẦN  <i class="fas fa-angle-down"></i></a>
+                    <ul class="menu-con">
+                        <li class="item-con">
+                            <a href="#">Quần lửng</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Quần dài</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item">
+                    <a href="../Assests/Chanvay.html">CHÂN VÁY  <i class="fas fa-angle-down"></i></a>
+                    <ul class="menu-con">
+                        <li class="item-con">
+                            <a href="#">Chân váy chữ A</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Chân váy bút chì</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Chân váy xếp ly</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Chân váy xòe</a>
+                        </li>
+                        <li class="item-con">
+                            <a href="#">Chân váy giả quần</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section id="conter">
+        <div class="trangchu">
+            <div class="trangchu-con">
+                <li>
+                    <a href="../Assests/Trangchu.html">
+                        <i class="nav-arrow fas fa-home"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                    <a href="#">/GIỎ HÀNG</a>
+                </li>
+            </div>
+
+        </div>
+
+    </section>
+    <!--section id="menu" class="elm row">
+        <div class="row-container container">
+            <div class="wrap-columns">
+                <div id="chitietgiohang" class="elm col-sm-12 column col-sm-12">
+                    <table class="table table-bordered-cart table-cart" border="3px" cellpadding="1" cellspacing="0" id="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">HÌNH ẢNH</th>
+                                <th class="text-center">TÊN SẢN PHẨM</th>
+                                <th class="text-center">ĐƠN GIÁ</th>
+                                <th class="text-center">SỐ LƯỢNG</th>
+                                <th class="text-center">THÀNH TIỀN</th>
+                                <th class="text-center">XÓA</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <img class="img" src="../img/anhdoan/Đầm/damhoanhi.jpg">
+                                    </a>
+                                </td>
+                                <td>
+                                    <h3 class="mb-0">
+                                        <a class="name-product-cart" href="">Đầm Hoa Nhí Vintage</a>
+                                    </h3>
+                                    <p>(160000 Đ)</p>
+                                </td>
+                                <td>
+                                    <span class="product-price">160000 <sup>Đ</sup></span>
+                                </td>
+                                <td>
+                                    <!-gán giá trị bằng 1 >
+                                    <input id="inputcart" type="number" min="1" max="10000" required oninput="speedConvertes(this.value)" onchange="speedConverters(this.value)" value="1" maxlength="3" class="np-number" style="max-width: 60px;text-align:center">
+                                </td>
+                                <!-td>
+                                Văn học
+                                </td->
+                                <td>
+                                    <span id="outputDT">160000 </span>
+                                </td>
+                                <!- tổng tiền ->
+                                <script>
+                                    function speedConverters(valumndt) {
+                                        document.getElementById("outputDT").innerHTML = valumndt * 160000;
+                                        var tong = 0;
+                                        var a = document.getElementById("outputKPH").innerHTML;
+                                        var b = document.getElementById("outputDT").innerHTML;
+                                        tong = parseInt(a) + parseInt(b); /*chuyển từ string sang int để tính*/
+                                        var d = document.getElementsByClassName("col-xs-12 col-sm-12 col-md-4 pull-right")[0];
+                                        d.getElementsByClassName("product-price")[0].innerText = tong; /*in ra tại vị trí class bằng tổng*/
+
+
+                                    }
+                                    //document.getElementsByClassName('dathang')[0].addEventListener('click',)
+                                </script>
+                                <!- end tổng tiền ->
+
+                                <td>
+                                    <input type="button" name="" value="Xóa" onclick="xoa(this)">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <img class="img" src="../img/anhdoan/Đầm/damom.jpg">
+                                    </a>
+                                </td>
+                                <td>
+                                    <h3 class="mb-0">
+                                        <a class="name-product-cart" href="">Đầm Body Cổ Đắp Chéo</a>
+                                    </h3>
+                                    <p></p>
+                                </td>
+                                <td>
+                                    <span class="product-price">500000 <sup>đ</sup></span>
+                                </td>
+                                <td>
+                                    <!- gán giá trị bằng  1->
+                                    <input id="inputMPH" type="number" min="1" max="10000" required oninput="speedConverter(this.value)" onchange="speedConverter(this.value)" value="1" maxlength="3" class="np-number" style="max-width: 60px;text-align:center">
+
+                                </td>
+
+                                <td>
+                                    <span id="outputKPH">500000 </span>
+                                </td>
+                                <script>
+                                    function speedConverter(valNum) {
+                                        document.getElementById("outputKPH").innerHTML = valNum * 500000;
+                                        var tong = 0;
+                                        var a = document.getElementById("outputKPH").innerHTML;
+                                        var b = document.getElementById("outputDT").innerHTML;
+                                        tong = parseInt(a) + parseInt(b); /*chuyển từ string sang int để tính*/
+                                        var d = document.getElementsByClassName("col-xs-12 col-sm-12 col-md-4 pull-right")[0];
+                                        d.getElementsByClassName("product-price")[0].innerText = tong; /*in ra tại vị trí class bằng tổng*/
+
+                                    }
+                                </script>
+
+                                <td>
+                                    <input type="button" name="" value="Xóa" onclick="xoa(this)">
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-  Xóa sản phẩm ->
+                    <script type="text/javascript" language="javascript">
+                        function xoa(cr7) {
+                            var i = confirm("Bạn chắc muốn xóa không?");
+                            if (i == true) {
+                                var i = cr7.parentNode.parentNode.rowIndex;
+                                document.getElementById("table").deleteRow(i);
+                            }
+                        }
+                    </script>
+
+
+                    <!-  end Xóa sản phẩm ->
+
+                </div>
+            </div>
+        </div-->
+
+    <section class="body">
+        <div class="grid wide container">
+            <!--div class="row list__head">
+                <div class="col l-2-4">
+                    <div class="list__head-item">
+                        Sản phẩm
+                    </div>
+                </div>
+                <div class="col l-2-4">
+                    <div class="list__head-item">
+                        Giá
+                    </div>
+                </div>
+                <div class="col l-2-4">
+                    <div class="list__head-item">
+                        Số lượng
+                    </div>
+                </div>
+                <div class="col l-2-4">
+                    <div class="list__head-item">
+                        Tổng
+                    </div>
+                </div>
+                <div class="col l-2-4">
+                    <div class="list__head-item" style="border-right: none;">
+
+                    </div>
+                </div>
+            </div>
+            <div class="card__content">
+            </div>
+        </div>
+        <div class="grid wide">
+            <div class="row buy">
+                <div class="col l-2-4">
+                    <div class="list__head-item remove in">
+                        Thanh Toán
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- form login ->
+            <form id="form-1" class="auth-form__form">
+                <div class="form-group">
+                    <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                    <input name="fullname" type="text" class="auth-form__input" placeholder="Tên của bạn">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                    <input type="text" class="auth-form__input" placeholder="Email">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                    <input type="text" class="auth-form__input" placeholder="Địa chỉ">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                    <input type="text" class="auth-form__input" placeholder="Số điện thoại">
+                    <span class="form-message"></span>
+                </div>
+                <input class="btn__print" type="button" value="Print" style="cursor: pointer;" />
+            </form>
+        </div>
+    </div-->
+            <!--div class="modal__print">
+        <div class="modal__overlay-print"></div>
+        <div class="modal__body">
+            <!-- form login >
+            <form class="form__print">
+                <div class="print__title">
+                    <h2>
+                        <span></span>
+                    </h2>
+                </div>
+                <div class="info">
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                    <div class="info__item">
+                        <span class="info__customer">
+                                
+                            </span>
+                    </div>
+                </div>
+                <div class="hang">
+                    <div class="title__hang">
+                        <div class="title__hang-item">
+                            Sản phẩm
+                        </div>
+                        <div class="title__hang-item">
+                            Giá
+                        </div>
+                        <div class="title__hang-item">
+                            Số lượng
+                        </div>
+                        <div class="title__hang-item">
+                            Thành tiền
+                        </div>
+                    </div>
+                    <div class="content__hang">
+                        <!-- <div class="content__hang-item">
+                                <div class="title__hang-item">
+                                    classico1
+                                </div>
+                                <div class="title__hang-item">
+                                    700.000đ
+                                </div>
+                                <div class="title__hang-item">
+                                    2
+                                </div>
+                                <div class="title__hang-item">
+                                    1.400.000đ
+                                </div>
+                            </div> >
+                    </div>
+                    <div class="tong">
+                        <div class="tong__title">
+                            Tổng tiền
+                        </div>
+                        <div class="tong__tien">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form__end">
+                    <div class="user">
+                        Khách Hàng
+                    </div>
+                    <div class="user">
+                        Nhân viên bán Hàng
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="../js/Giohang.js"></script>
+    <script>
+        var list = JSON.parse(localStorage.getItem('cart'));
+
+        function LoadData() {
+            var str = "";
+            var n = 0;
+            var t = 0;
+            for (x of list) {
+                str += `  <div class="row item_card">
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                <img class="img__card" src="${x.image}" alt="">
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                ${x.price}
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                <input value="` + x.quantity + `" type="number" name="points" min="0" max="100" step="1">
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div class="list__head-item">
+                                ${x.price * x.quantity}
+                            </div>
+                        </div>
+                        <div class="col l-2-4">
+                            <div onclick="Xoa(` + x.id + `)" class="list__head-item remove" style="border-right: none;">
+                                Xoá khỏi giỏ
+                            </div>
+                        </div>
+                    </div>
+                 `;
+            }
+            document.querySelector(".card__content").innerHTML = str;
+            const btn__sl = document.querySelectorAll('.list__head-item input');
+            btn__sl.forEach((btn, index) => {
+                    btn.onblur = function() {
+                        list[index].quantity = Number(btn.value);
+                        LoadData();
+                        updateCart();
+                    }
+                })
+                /* $("#spTong").text(t); */
+        }
+
+        function XoaCart() {
+            localStorage.setItem('cart', null);
+            location.reload();
+        }
+
+        function Xoa(id) {
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0) {
+                list.splice(index, 1);
+            }
+            LoadData();
+        }
+
+        function updateQuantity(id) {
+            var quantity = Number($('#q_' + id).val());
+            var index = list.findIndex(x => x.id == id);
+            if (index >= 0 && list[index].quantity >= 1) {
+                list[index].quantity = quantity;
+            }
+            LoadData();
+        }
+
+        function updateCart() {
+            localStorage.setItem('cart', JSON.stringify(list));
+            console.log('xong');
+        }
+        LoadData();
+    </script>
+
+    </section>
+    <div class="bg_cart shopping-cart-table-total col-sm-12 column col-sm-12">
+        <a id="tienhanhthanhtoanRemove" href="../Assests/Thanhtoan.html" onclick="window.location.href='/checkout'" class="btn-checkout-cart col-sm-6" title="Thanh toán">Tiến hành thanh toán</a>
+        <div class="margin-top-20  margin-bottom-40 col-sm-6">
+            <a href="../Assests/Trangchu.html" class="form-cart-continue">Tiếp tục mua hàng</a>
+        </div>
+    </div-->
+
+            <body>
+                <div class="app">
+
+                    <section class="body">
+                        <div class="grid wide container">
+                            <div class="row list__head">
+                                <div class="col l-2-4">
+                                    <div class="list__head-item">
+                                        Sản phẩm
+                                    </div>
+                                </div>
+                                <div class="col l-2-4">
+                                    <div class="list__head-item">
+                                        Giá
+                                    </div>
+                                </div>
+                                <div class="col l-2-4">
+                                    <div class="list__head-item">
+                                        Số lượng
+                                    </div>
+                                </div>
+                                <div class="col l-2-4">
+                                    <div class="list__head-item">
+                                        Tổng
+                                    </div>
+                                </div>
+                                <div class="col l-2-4">
+                                    <div class="list__head-item" style="border-right: none;">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                            </div>
+                        </div>
+                        <div class="grid wide">
+                            <div class="row buy">
+                                <div class="col l-2-4">
+                                    <div class="list__head-item remove in">
+                                        <a href="../Assests/Thanhtoan.html">Thanh Toán</a>
+                                    </div>
+                                    <div class="list__head-item remove in" style="margin-top: 20px;">
+                                        <div onclick="updateCart()" href="">Cập nhật giỏ hàng</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </section>
+                <div class="modal__print">
+                    <div class="modal__overlay-print"></div>
+                    <div class="modal__body">
+                        <!-- form login -->
+                        <form class="form__print">
+                            <div class="print__title">
+                                <h2>
+                                    <span></span>
+                                </h2>
+                            </div>
+                            <div class="info">
+                                <div class="info__item">
+                                    <span class="info__customer">
+                                    
+                                </span>
+                                </div>
+                                <div class="info__item">
+                                    <span class="info__customer">
+                                    
+                                </span>
+                                </div>
+                                <div class="info__item">
+                                    <span class="info__customer">
+                                    
+                                </span>
+                                </div>
+                                <div class="info__item">
+                                    <span class="info__customer">
+                                    
+                                </span>
+                                </div>
+                            </div>
+                            <div class="hang">
+                                <div class="title__hang">
+                                    <div class="title__hang-item">
+                                        Sản phẩm
+                                    </div>
+                                    <div class="title__hang-item">
+                                        Giá
+                                    </div>
+                                    <div class="title__hang-item">
+                                        Số lượng
+                                    </div>
+                                    <div class="title__hang-item">
+                                        Thành tiền
+                                    </div>
+                                </div>
+
+                                <div class="tong">
+                                    <div class="tong__title">
+                                        Tổng tiền
+                                    </div>
+                                    <div class="tong__tien">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__end">
+                                <div class="user">
+                                    Khách Hàng
+                                </div>
+                                <div class="user">
+                                    Nhân viên bán Hàng
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <script src="../js/Giohang.js"></script>
+        <script>
+            var list = JSON.parse(localStorage.getItem('cart'));
+
+            function LoadData() {
+                var str = "";
+                var n = 0;
+                var t = 0;
+                for (x of list) {
+                    str += `  <div class="row item_card">
+                            <div class="col l-2-4">
+                                <div class="list__head-item">
+                                    <img class="img__card" src="${x.image}" alt="">
+                                </div>
+                            </div>
+                            <div class="col l-2-4">
+                                <div class="list__head-item">
+                                    ${x.price}
+                                </div>
+                            </div>
+                            <div class="col l-2-4">
+                                <div class="list__head-item">
+                                    <input value="` + x.quantity + `" type="number" name="points" min="0" max="100" step="1">
+                                </div>
+                            </div>
+                            <div class="col l-2-4">
+                                <div class="list__head-item">
+                                    ${x.price * x.quantity}
+                                </div>
+                            </div>
+                            <div class="col l-2-4">
+                                <div onclick="Xoa(` + x.id + `)" class="list__head-item remove" style="border-right: none;">
+                                    Xoá khỏi giỏ
+                                </div>
+                            </div>
+                        </div>
+                     `;
+                }
+                document.querySelector(".card__content").innerHTML = str;
+                const btn__sl = document.querySelectorAll('.list__head-item input');
+                btn__sl.forEach((btn, index) => {
+                        btn.onblur = function() {
+                            list[index].quantity = Number(btn.value);
+                            LoadData();
+                            updateCart();
+                        }
+                    })
+                    /* $("#spTong").text(t); */
+            }
+
+            function XoaCart() {
+                localStorage.setItem('cart', null);
+                location.reload();
+            }
+
+            function Xoa(id) {
+                var index = list.findIndex(x => x.id == id);
+                if (index >= 0) {
+                    list.splice(index, 1);
+                }
+                LoadData();
+            }
+
+            function updateQuantity(id) {
+                var quantity = Number($('#q_' + id).val());
+                var index = list.findIndex(x => x.id == id);
+                if (index >= 0 && list[index].quantity >= 1) {
+                    list[index].quantity = quantity;
+                }
+                LoadData();
+            }
+
+            function updateCart() {
+                localStorage.setItem('cart', JSON.stringify(list));
+                console.log('xong');
+            }
+            LoadData();
+        </script>
+
+
+        <div id="footer">
+
+            <div class="phan-duoi">
+                <div class="duoi-1">
+                    <h3>Miễn phí giao hàng</h3>
+                    <p style="font-size:15px;">Áp dụng với hóa đơn từ 800.000 đ</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>30 ngày đổi sản phẩm</h3>
+                    <p style="font-size:15px;"> Áp dụng với sản phẩm nguyên giá</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>Ưu đãi hấp dẫn</h3>
+                    <p style="font-size:15px;">Quyền lợi đặc biệt với KH VIP</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>Hotline</h3>
+                    <p style="font-size:15px;">Mua hàng Online: 0366724895</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="wrapper">
+            <div class="wrapper-item">
+                <div class="info">
+                    <h3>THÔNG TIN CHUNG</h3>
+                </div>
+                <diV class="info-con">
+                    <li><a href="#"><i class="fas fa-home"></i><span>Yên Mỹ, Hưng Yên</span></a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i><span>0366378957</span></a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i><span>hoai19112001anh@gmail.com </span></a></li>
+                </div>
+                <div class="thongtin">
+                    <ul>
+                        <li><a href="#"><i style="color: rgb(58, 58, 211);" class="fab fa-facebook-square small-icons"></i></a></li>
+                        <li><a href="#"><i style="color: red;" class="fab fa-youtube small-icons"></i></a></li>
+                        <li><a href="#"><i style="color: rgba(180, 20, 28, 0.699);" class="fab fa-instagram-square small-icons"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="policy">
+                <h3>CHÍNH SÁCH</h3>
+                <li><a href="../Assests/Phuongthuctt.html" style="font-size:17px;"> Phương thức thanh toán</a></li>
+                <li><a href="../Assests/Huongdanmuahang.html" style="font-size:17px;">Hướng dẫn mua hàng</a></li>
+                <li><a href="../Assests/Tra.html" style="font-size:17px;">Chính sách đổi trả và hoàn tiền</a></li>
+                <li><a href="../Assests/Baohanh.html" style="font-size:17px;">Chính sách bảo hành</a></li>
+            </div>
+            <div class="about">
+                <h3>SAM BOUTIQUE</h3>
+                <li><a href="../Assests/Gioithieu.html" style="font-size:17px;">Giới thiệu</a></li>
+                <li><a href="#" style="font-size:17px;">Liên hệ</a></li>
+                <li><a href="../Assests/Hoptac.html" style="font-size:17px;">Hợp tác kinh doanh</a></li>
+            </div>
+        </div>
+        <div class="copylink">
+            <p>"Facebook:" <a href="https://www.facebook.com/nguyenthihoai12345" style="color:rgb(146, 108, 93)">https://www.facebook.com/nguyenthihoai12345</a></p>
+        </div>
+        </div>
+
+
+        <script src="../js/Giohang.js"></script>
+
+        </body>
+
+</html>

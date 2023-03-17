@@ -1,0 +1,675 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .box {
+        margin-top: 9px;
+        margin-left: 60px;
+    }
+    /*------------Menu-----------------------*/
+    /*---------------------------------------*/
+    
+    html {
+        /*font-family: 'Source Sans Pro', sans-serif;*/
+        font-family: 'Times New Roman', Times, serif;
+        /*kiểu chữ cho cả trang*/
+        font-size: 15px;
+        color: black;
+        background-color: #ffffff;
+        text-rendering: optimizeLegibility;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        width: 90%;
+        height: 50%;
+        box-sizing: border-box;
+        margin-top: -60px;
+    }
+    
+    .menu__item a {
+        text-decoration: none;
+        display: block;
+        position: relative;
+        transition: border-bottom 0.3s ease-in-out;
+        font-size: 130%;
+        font-weight: 400;
+    }
+    
+    .nav li a {
+        font-weight: 900;
+        color: rgb(141, 113, 113);
+    }
+    /*.menu {
+    /*color:rgb(207, 195, 179);
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 0px 10%;
+}*/
+    
+    .menu {
+        /*color:rgb(207, 195, 179);*/
+        width: 100%;
+        height: 60px;
+        z-index: 1;
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+        margin-top: -1.60cm;
+        padding: 0px 10%;
+    }
+    
+    .menu li a:hover,
+    .menu li a:active {
+        border-bottom: 2px solid rgb(141, 113, 113);
+    }
+    
+    .menu__item {
+        z-index: 1;
+        position: relative;
+        font-size: 90%;
+        font-weight: 600;
+        padding: 10px 15px;
+        margin: 0px 5%;
+    }
+    
+    .menu-con {
+        list-style: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        /*border: solid 2px rgb(209, 181, 181);*/
+        background-color: #ebe2e2;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        min-width: 140px;
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+    }
+    
+    .item-con {
+        display: block;
+    }
+    
+    .item-con a {
+        display: block;
+        color: rgb(119, 117, 117);
+        padding: 0px 10px;
+    }
+    
+    .menu__item:hover .menu-con {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    header {
+        /*background-color: #d3b995;*/
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    /*background-image: linear-gradient(#D8C3A5, #ad8784);*/
+    /*background-image: linear-gradient(#D8C3A5, #ad8784);*/
+    /*----phần logo-----*/
+    
+    .logo {
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*-----------Đăng nhập vs giỏ hàng----------*/
+    
+    .main-nav {
+        float: right;
+        list-style: none;
+        /*xóa chấm đen mặc định*/
+        margin-right: 30px;
+        margin-top: -2.5cm;
+    }
+    /* khi click chuột thì có gạch chân*/
+    
+    .main-nav li a:hover,
+    .main-nav li a:active {
+        border-bottom: 2px solid rgb(141, 113, 113);
+    }
+    
+    .main-nav li a {
+        text-decoration: none;
+        /*đường kẻ mặc định ở chân*/
+        color: rgb(141, 113, 113);
+        font-size: 120%;
+        font-weight: 500;
+        transition: border-bottom 0.3s ease-in-out;
+        /*độ nhanh chậm chuyển cảnh*/
+        padding: 3px 0;
+        font-weight: 600;
+    }
+    
+    .main-nav li {
+        display: inline-block;
+        /*hiển thị trên cùng 1 hàng*/
+        margin-right: 40px;
+    }
+    
+    .clearfix::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    /*---------Thanh tìm kiếm -------------*/
+    /*------------------------------------*/
+    
+    .search {
+        font-family: 'Noto Sans JP', sans-serif;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        width: 350px;
+        border: none;
+        /*độ đậm nhạt khung tìm kiếm*/
+        color: rgb(167, 145, 145);
+        outline: none;
+    }
+    
+    .Email {
+        display: flex;
+        border-radius: 30px;
+        border: 1px solid;
+        width: fit-content;
+        padding: 0px 15px;
+        margin-right: 5%;
+        margin-bottom: 70px;
+    }
+    
+    .btn7 {
+        padding: 5px;
+        border-radius: 1px;
+        position: relative;
+    }
+    /*---------menu---------*/
+    /*---------------------*/
+    
+    .container-section {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .container {
+        background: white;
+        width: 100%;
+        height: 900%;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    
+    .item {
+        background: rgb(139, 100, 100);
+        margin: 100px;
+        color: white;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+    }
+    /*------trang chủ------------------*/
+    /*---------------------------------*/
+    
+    .conter {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .trangchu {
+        margin-top: -5px;
+        background: rgb(172, 169, 169);
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 20px;
+        list-style: none;
+        text-align: center;
+        font-size: 20px;
+        height: 50px;
+    }
+    
+    #nav-arrow {
+        font-size: 10px;
+        color: black;
+    }
+    
+    .trangchu-con li {
+        margin-top: 13px;
+    }
+    
+    .trangchu-con li a {
+        text-decoration: none;
+        color: rgb(63, 56, 56);
+        font-size: 15PX;
+    }
+    
+    .trangchu-con li a:hover,
+    .trangchu-con li a:active {
+        border-bottom: 2px solid rgb(141, 113, 113);
+    }
+    /* Begin Banner */
+    /*.bg-title {
+    background: url(../img/bg_title.png) center bottom no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bg-title h1 {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    font-family: Sriracha;
+    font-size: 30px;
+    color: #fffc00;
+    font-weight: 400;
+    text-align: center;
+}
+
+.bg-title #breadcrumbs {
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    color: #FFF;
+}
+
+.bg-title #breadcrumbs a {
+    color: #FFF;
+}
+
+*/
+    
+    .clfw {
+        width: 100%!important;
+        clear: both!important;
+        display: block!important;
+        height: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+    /* End Banner */
+    
+    .left {
+        background-color: #ccc;
+        width: 55%;
+        margin-left: 2.5%;
+    }
+    
+    h2 {
+        margin-top: 20px;
+        font-weight: 700;
+        color: #333;
+        font-size: 18px;
+    }
+    
+    .left input {
+        border: 1px solid #00000059;
+        width: 100%;
+        height: 45px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        padding-left: 10px;
+    }
+    
+    .left select {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 45px;
+        border: 1px solid #00000059;
+        border-radius: 6px;
+        font-size: 15px;
+    }
+    
+    .left textarea {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #00000059;
+        border-radius: 6px;
+        color: #333;
+        font-size: 15px;
+        padding: 10px;
+    }
+    
+    h2 {
+        margin-top: 20px;
+        font-weight: 700;
+        color: #333;
+        font-size: 20px;
+    }
+    /*.between p {
+    font-size: 15px;
+    border: 1px solid #00000054;
+    border-radius: 6px;
+    padding: 5px;
+    color: #333;
+    background: #f8f8f8;
+}*/
+    
+    .right {
+        width: 30%;
+        float: right;
+        margin-right: 5%;
+        margin-top: -27%;
+    }
+    /*-----Chỉnh đơn hàng----*/
+    
+    .sp img {
+        width: 50%;
+        height: 50px;
+        border-radius: 6px;
+        float: left;
+        margin-top: 8px;
+    }
+    /*.sp span {
+        background: #faf901;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        margin-top: -10px;
+        position: absolute;
+        margin-right: 80px;
+        opacity: 0.8;
+    }*/
+    
+    .sp p {
+        margin-top: 15px;
+        position: absolute;
+        margin-left: 10%;
+        color: #333;
+        font-size: 15px;
+    }
+    
+    .sp h3 {
+        position: absolute;
+        margin-top: 20px;
+        font-size: 15px;
+        font-family: sans-serif;
+        margin-left: 305px;
+        color: #0000006e;
+    }
+    
+    .sp {
+        height: 60px;
+        border-bottom: 1px solid #33333340;
+    }
+    /*chỉnh tiền -----*/
+    
+    .tien {
+        border-bottom: 1px solid #0000004f;
+        height: 60px;
+    }
+    
+    .tien p {
+        margin-top: 15px;
+        color: #333333bf;
+    }
+    
+    .tien h3 {
+        position: absolute;
+        margin-top: -27px;
+        font-size: 15px;
+        margin-left: 305px;
+        color: #0000006e;
+    }
+    
+    .tien h5 {
+        margin-top: 10px;
+        color: #33333387;
+    }
+    /*---tổng tiền*/
+    
+    .tongtien {
+        margin-top: 10px;
+    }
+    
+    .tongtien p {
+        color: #0000007a;
+        font-size: 15px;
+    }
+    
+    .tongtien h3 {
+        position: absolute;
+        margin-top: -27px;
+        font-size: 15px;
+        margin-left: 305px;
+        color: #0000006e;
+    }
+    
+    .quayve p {
+        color: rgba(74, 74, 216, 0.89);
+        margin-left: -43px;
+        margin-top: -25px;
+        font-size: 13px;
+    }
+    
+    .datHang {
+        width: 100px;
+        margin-left: 266px;
+        color: coral;
+        height: 35px;
+        background: rgba(37, 37, 207, 0.938);
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        opacity: 0.6;
+        /*tùy chỉnh độ trong suốt của ảnh*/
+        transition: 0.3s;
+    }
+    
+    .datHang:hover {
+        background-color: blue;
+        color: white;
+    }
+    
+    #bang {
+        width: 100%;
+        height: 100%;
+        margin: 50px 20px;
+        float: left;
+    }
+    /*phần ưu đãi*/
+    
+    .phan-duoi {
+        margin-top: 10px;
+        background: rgb(172, 169, 169);
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 0px;
+    }
+    
+    .duoi-1 {
+        padding-top: 10px;
+        /* font-size: 18px;*/
+    }
+    /*.duoi-1 h3 {
+        margin-left: 85px;
+    }*/
+    
+    p {
+        padding: 10px 55px;
+        /*padding-right: 10px;*/
+    }
+    /*----------------------------*/
+    /*------------------------------*/
+    /* phần cuối*/
+    
+    #footer {
+        width: 100%;
+    }
+    
+    .sp-banner {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+    
+    .sp-banner .banner {
+        height: 100%;
+    }
+    
+    .sp-banner .banner img {
+        height: 100%;
+        margin: 0 auto;
+        width: 100%;
+        object-fit: scale-down;
+    }
+    
+    .banner-con {
+        FONT-SIZE: 17px;
+        color: #553d3dcf;
+    }
+    
+    .sp-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+    
+    .wrapper {
+        margin-top: 50px;
+        background-color: rgb(172, 169, 169);
+        padding-bottom: 100px;
+        /* display: grid;
+    grid-template-columns: auto auto auto; */
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .info h3 {
+        padding-top: 50px;
+    }
+    
+    .wrapper li a {
+        text-decoration: none;
+        color: rgb(70, 40, 40);
+        display: block;
+    }
+    
+    .info-con span {
+        margin-left: 10px;
+    }
+    
+    .wrapper li {
+        list-style: none;
+        margin: 10px 0px;
+    }
+    
+    .info-con li a:hover,
+    .info-con li a:active {
+        /*border-bottom: 2px solid rgb(83, 51, 51);*/
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .info-con li a {
+        padding: 1px 0;
+        font-weight: 500;
+        transition: all 0.4s;
+    }
+    
+    .policy h3 {
+        padding-top: 50px;
+    }
+    
+    .policy li a {
+        text-decoration: none;
+        color: rgb(70, 40, 40);
+    }
+    
+    .policy>li {
+        list-style: none;
+    }
+    
+    .policy>li a {
+        transition: all 0.4s;
+    }
+    
+    .policy li a:hover,
+    .policy li a:active {
+        /*border-bottom: 2px solid rgb(83, 51, 51);*/
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .policy li a {
+        padding: 1px 0;
+        font-weight: 500;
+    }
+    
+    .about h3 {
+        padding-top: 50px;
+    }
+    
+    .about li a {
+        text-decoration: none;
+        color: rgb(70, 40, 40);
+    }
+    
+    .about>li {
+        list-style: none;
+    }
+    
+    .about>li a {
+        transition: all 0.4s;
+    }
+    
+    .about li a:hover,
+    .about li a:active {
+        /*border-bottom: 2px solid rgb(83, 51, 51);*/
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .about li a {
+        padding: 1px 0;
+        font-weight: 500;
+    }
+    
+    .copylink {
+        background-color: rgb(172, 169, 169);
+    }
+    
+    .copylink p {
+        color: rgb(63, 49, 49);
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .thongtin ul li a i {
+        font-weight: 900;
+        font-size: 150%;
+        transition: all 0.2s;
+    }
+    
+    .thongtin ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    
+    .thongtin ul li a i:hover {
+        transform: scale(1.3);
+        color: black;
+    }

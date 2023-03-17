@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị</title>
+    <link rel="stylesheet" href="../Admin/QuanTri.css">
+    <script src="https://kit.fontawesome.com/d6d4f530bc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../Assests/Trangchu.html">
+                    <!--img src="../img/anhdoan/anhlogo01.jpg" style="with:1%;"-->
+                </a>
+            </div>
+            <div class="ad">
+                <i class="fas fa-user"></i>
+                <span>Anh Nguyễn</span>
+                <!--i class="fas fa-chevron-down"></i-->
+            </div>
+        </div>
+    </header>
+    <nav class="leftmenu" style="height: 1000px;">
+        <div class="avatar">
+            <img src="../img/anhdoan/hi.jpg" alt="Avata">
+            <div class="avatarName"> <br>
+                <i>Anh Nguyễn</i>
+            </div>
+        </div>
+        <ul>
+            <li class="">
+                <a href="../Assests/Trangchu.html">
+                    <i class="fa fa-dashboard"></i><span>Trang chủ</span>
+                </a>
+            </li>
+            <li id="quanLySanPham" onclick="hien($(this).attr('id'))"><i class="fas fa-qrcode"></i>Quản lý Sản Phẩm</li>
+            <!--li id="quanLyDonHang" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Đơn Hàng</li-->
+            <li id="thongKeDoanhThu" onclick="hien($(this).attr('id'))"><i class="fas fa-stream"></i>Thống kê doanh thu</li>
+            <!--li id="quanLyLoaiThucDon" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Thực Đơn</li-->
+            <!--li id="quanLyNguyenLieu" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Nguyên Liệu</li-->
+            <!--li id="quanLyLoaiNguyenLieu" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Nguyên Liệu</li-->
+            <!--li id="quanLyThongTin" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Thông Tin</li-->
+            <!--li id="quanLyLoaiThongTin" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Thông Tin</li-->
+            <li id="quanLyKhachhang" onclick="hien($(this).attr('id'))"><a href="../Admin/QL_NguoiDung.html"><i class="fas fa-link"></i>Quản lý Khách Hàng</li>
+            <li id="quanLyDangxuat" onclick="hien($(this).attr('id'))">
+                <a href="../Admin/AminDangNhap.html"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <section class="main">
+        <div class="quanLySanPham container-1">
+            <div class="them-none sua">
+                <div class="content">
+                    <div class="them-none-content">
+                        <td>
+                            <label onclick="suaSanPham($(this))" class="d" style="top: 490px;left: 350px;position: absolute;">Sửa</label>
+                        </td>
+                        <td>
+                            <p style="top: 490px;left: 150px;" class="close closeOpentdi4">Đóng</p>
+                        </td>
+
+                        <table class="tbthem" id="i4td">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quanLySanPham container-1">
+            <div class="them-none chiThem">
+                <div class="content">
+                    <div class="them-none-content">
+                        <h2>Thêm sản phẩm</h2>
+                        <table class="tbthem">
+                            <tbody style="text-align: left;">
+                                <tr>
+                                    <td style="width: 150px">Tên sản phẩm : </td>
+                                    <td style="width: 360px">
+                                        <input id="tensp" required type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Giá sản phẩm :</td>
+
+
+                                    <td style="width: 360px">
+                                        <input id="giasp" required type="text">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Thương hiệu : </td>
+                                    <td><input id="thuonghieu" required type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ảnh :</td>
+                                    <td>
+                                        <img id="load" class="imgtd" src="https://via.placeholder.com/350">
+                                    </td>
+                                    <td>
+                                        <input style="width: 120px!important;" required type="file" name="file" id="file" accept="image/*" class="inputfile" />
+                                        <label for="file">Chọn file ảnh</label>
+                                    </td>
+                                    <tr>
+                                        <td>Xuất xứ :</td>
+                                        <td><input id="Xuatxu" required type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chất liệu :</td>
+                                        <td><input id="Chatlieu" required type="text"></td>
+                                        <!--td>Chất liệu :</td>
+                                        <td>
+                                            <select id="Chatlieu" required id="size">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                    </select>
+                                        </td-->
+                                    </tr>
+                                    <tr>
+                                        <td>Họa tiết :</td>
+                                        <td><input id="Hoatiet" required type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Số lượng :</td>
+                                        <td> <input id="sl" required type="number"></td>
+                                    </tr>
+
+                                    <td>
+                                        <label onclick="themSanPham()" class="d" style="top: 436px;
+                               left: 89px;
+                               position: absolute;">Thêm</label>
+                                    </td>
+                                    <td><span class="close">Đóng</span></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="quanLySanPhamThemSuaXoa">
+                <h2>Quản Lý Sản Phẩm</h2>
+                <div class="them-click">
+                    <button class="btn-them">Thêm sản phẩm</button>
+                </div>
+                <div class="seach">
+                    <input type="text" id="mySearch" onkeyup="seach()" placeholder="Nhập tên sản phẩm cần tìm ..." title="Type in a name">
+                </div>
+                <div class="fieldset">
+                    <fieldset>
+                        <div id="example_wrapper" class="dataTables_wrapper">
+                            <table id="listSanPham" class="display dataTable" role="grid" aria-describedby="example_info">
+                                <thead style="background: #ddd;">
+                                    <tr>
+                                        <th style="width: 24%;">Tên sản phẩm</th>
+                                        <th style="width: 9%;">Giá sản phẩm</th>
+                                        <th style="width: 15%;">Ảnh</th>
+                                        <th style="width: 5%;">Thương hiệu</th>
+                                        <th style="width: 10%;">Xuất xứ</th>
+                                        <th style="width: 13%;">Chất liệu</th>
+                                        <th style="width: 5%;">Số lượng</th>
+                                        <th style="width: 10%;">Họa tiết</th>
+                                        <th style="width: 5%;">Xóa</th>
+                                        <th style="width: 5%;">Sửa</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dstd" style="text-align: center;background-color: #c00a280c;">
+                                    <tr class="sanpham">
+                                        <td class="ten tenspopen sorting_1">Chân váy xếp ly Hàn Quốc</td>
+                                        <td class="giaspopen">160000</td>
+                                        <td class="sorting_1 imgopen"><img src="../img/anhdoan/Chân váy/chanvayxeply.jpg" style="width:100%" class="imgtd"></td>
+                                        <td class="thuonghieuopen">No Brand</td>
+                                        <td class="Xuatxuopen">Việt Nam</td>
+                                        <td class="Chatlieuopen">Chất liệu khác</td>
+                                        <td class="soluongopen">5</td>
+                                        <td class="Hoatietopen">Trơn</td>
+                                        <td onclick="xoa($(this))" class="deletebutton"><i class="fas fa-trash-alt"></i></td>
+                                        <td onclick="sua($(this))" class="editbutton"><i class="fas fa-edit"></i></td>
+                                    </tr>
+                                    <tr class="sanpham">
+                                        <td class="ten tenspopen sorting_1">Quần caro ống rộng</td>
+                                        <td class="giaspopen">138000</td>
+                                        <td class="sorting_1 imgopen"><img src="../img/anhdoan/Quần/quancaro.jpg" style="width:100%" class="imgtd"></td>
+                                        <td class="thuonghieuopen">No Brand</td>
+                                        <td class="Xuatxuopen">Việt Nam</td>
+                                        <td class="Chatlieuopen">Thun</td>
+                                        <td class="soluongopen">7</td>
+                                        <td class="Hoatietopen">Caro</td>
+                                        <td onclick="xoa($(this))" class="deletebutton"><i class="fas fa-trash-alt"></i></td>
+                                        <td onclick="sua($(this))" class="editbutton"><i class="fas fa-edit"></i></td>
+                                    </tr>
+                                    <tr class="sanpham">
+                                        <td class="ten tenspopen sorting_1">Áo thun nữ tay lỡ From rộng</td>
+                                        <td class="giaspopen">150000</td>
+                                        <td class="sorting_1 imgopen"><img src="../img/anhdoan/Áo/aothunnu.jpeg" style="width:100%" class="imgtd"></td>
+                                        <td class="thuonghieuopen">No Brand</td>
+                                        <td class="Xuatxuopen">Việt Nam</td>
+                                        <td class="Chatlieuopen">Cotton</td>
+                                        <td class="soluongopen">4</td>
+                                        <td class="Hoatietopen">Chữ trước ngực</td>
+                                        <td onclick="xoa($(this))" class="deletebutton"><i class="fas fa-trash-alt"></i></td>
+                                        <td onclick="sua($(this))" class="editbutton"><i class="fas fa-edit"></i></td>
+                                    </tr>
+                                    <tr class="sanpham">
+                                        <td class="ten tenspopen sorting_1">Váy trắng phối nơ ngực</td>
+                                        <td class="giaspopen">307000</td>
+                                        <td class="sorting_1 imgopen"><img src="../img/anhdoan/Đầm/damtrang.jpg" style="width:100%" class="imgtd"></td>
+                                        <td class="thuonghieuopen">No Brand</td>
+                                        <td class="Xuatxuopen">Việt Nam</td>
+                                        <td class="Chatlieuopen">Chất liệu khác</td>
+                                        <td class="soluongopen">8</td>
+                                        <td class="Hoatietopen">Trơn</td>
+                                        <td onclick="xoa($(this))" class="deletebutton"><i class="fas fa-trash-alt"></i></td>
+                                        <td onclick="sua($(this))" class="editbutton"><i class="fas fa-edit"></i></td>
+                                    </tr>
+
+                                    <tr class="sanpham" class="moiSuaNe"></tr>
+                                </tbody>
+                            </table>
+                    </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thongKeDoanhThu none container-1">
+                <h2>Thống kê số lượng đơn hàng</h2>
+                <div class="dulieu">
+                    <div class="dl_motkhoi">
+                        <div class="dl_trai">
+                            <h3 class="solieu slsp">2203</h3>
+                            <span>Sản phẩm</span>
+                        </div>
+                        <div class="dl_phai">
+                            <img src="./Assests/img/P4rs1.jpg" alt="" style="width: 90px;">
+                        </div>
+                    </div>
+                    <!-- hết 1 khối -->
+                    <div class="dl_motkhoi">
+                        <div class="dl_trai">
+                            <h3 class="solieu tslsp">123456789</h3>
+                            <span>Tổng số lượng</span>
+                        </div>
+                        <div class="dl_phai">
+                            <i class="fas fa-plus" style="margin-top: -60px;margin-left: -83px;font-size: 90px;color: #fff;opacity: 0.3;"></i>
+                        </div>
+                    </div>
+                    <!-- hết 1 khối -->
+                    <div class="dl_motkhoi">
+                        <div class="dl_trai">
+                            <h3 class="solieu tg">22032000</h3>
+                            <span>Tổng giá trị sản phẩm</span>
+                        </div>
+                        <div class="dl_phai">
+                            <i class="fas fa-dollar-sign" style="margin-top: -60px;color: #13131333;margin-left: -58px; font-size: 100px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../Admin/QuanTri.js"></script>
+</body>
+
+</html>

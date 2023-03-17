@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    width: 100%;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.header {
+    height: 60px;
+    background: #E85A4F;
+}
+
+.container {
+    width: 1330px;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 13px 43px;
+    display: inline-block;
+}
+
+.ad {
+    display: block;
+    float: right;
+    color: white;
+    margin: 14px;
+    padding: 0 20px;
+}
+
+.ad i {
+    margin: 10px;
+}
+
+.ad i:hover,
+.ad span:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+.leftmenu {
+    width: 23%;
+    background: #c52217dc;
+    float: left;
+}
+
+.leftmenu ul li {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 13px;
+    color: white;
+    padding-left: 40px;
+    border-top: 1px solid rgba(156, 12, 12, 0.678);
+    border-bottom: 1px solid #850015;
+    transition: 0.4s;
+}
+
+nav ul li:hover {
+    padding-left: 50px;
+    color: yellow;
+}
+
+.leftmenu ul li i {
+    margin-right: 16px;
+}
+
+.leftmenu ul li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 13px;
+    color: white;
+    padding-left: 1px;
+    border-top: 1px solid rgba(156, 12, 12, 0.678);
+    border-bottom: 1px solid #850015;
+    transition: 0.4s;
+}
+
+nav ul li:hover a {
+    padding-left: 5px;
+    color: yellow;
+}
+
+.leftmenu ul li i a {
+    margin-right: 16px;
+}
+
+.main {
+    width: 77%;
+    height: auto;
+    float: right;
+}
+
+
+/* begin avata */
+
+.avatar {
+    margin: 20px auto;
+    position: relative;
+    display: table
+}
+
+.avatar img {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+.avatarName {
+    font-size: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 1em;
+    color: #fff;
+    line-height: 1;
+    font: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fa-circle {
+    color: rgb(8, 209, 8);
+}
+
+
+/*-----------*/
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 50%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    border: 1px;
+}
+
+
+/*header {
+    width: 100%;
+    height: 60px;
+    background-color: chocolate;
+}*/
+
+
+/*.txt-panel {
+    padding-left: 90px;
+    padding-top: 5px;
+    font-family: 'Franklin Gothic';
+    font-size: 18px;
+}
+
+.div-left {
+    background: rgb(247, 247, 247);
+    border-right: 1px solid #cbcbcb;
+    height: 100%;
+}*/
+
+
+/*#menu ul li {
+    list-style: none;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    background: #f3f3f3;
+    display: block;
+    font-size: 17px;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px;
+    color: #3b3b3b;
+}
+
+#menu ul li ul li a {
+    padding-left: 50px;
+    background: #ffffff;
+    font-size: 15px;
+}
+
+#menu ul li ul li a:hover {
+    background: #f3f3f3;
+}
+
+.left-o {
+    float: right;
+    margin-right: 5px;
+}
+
+#menu ul li ul {
+    display: ;
+}
+
+#menu>ul>li.active {
+    border-bottom: none;
+}
+
+.size {
+    text-transform: uppercase;
+    color: darkcyan;
+}
+
+
+/*-----------------*/
+
+.search {
+    float: right;
+    margin: 10px 320px 40px 10px;
+}
+
+.ql {
+    font-family: Tahoma;
+    font-size: 13px;
+    margin: auto;
+    /* margin-top: 10px; */
+    color: black;
+}
+
+td {
+    text-align: center;
+}
+
+.ql tr {
+    text-align: center;
+    line-height: 40px;
+}
+
+.ql th {
+    background-color: cadetblue;
+}
+
+#myInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 250px;
+    font-size: 14px;
+    padding: 1px 5px 5px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+#bgaddRow {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    /*z-index: 99;*/
+}
+
+#addRow {
+    position: relative;
+    line-height: 1.5;
+    font-size: 18px;
+    width: 600px;
+    left: -10%;
+    top: 100px;
+    margin-left: -30px;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    background: #e9e9e9;
+    overflow: auto;
+}
+
+#addRow input {
+    width: 450px;
+    height: 25px;
+}
+
+#addRow i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#EditTB {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    /*z-index: 99;*/
+}
+
+input.update {
+    width: 45px;
+    height: 30px;
+    background: blueviolet;
+    color: white;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input.Del {
+    width: 45px;
+    height: 30px;
+    background: rgb(231, 29, 29);
+    color: white;
+}

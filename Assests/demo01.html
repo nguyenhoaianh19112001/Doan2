@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple iPhone 7 Plus - 32GB</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/demo01.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="icon" href="images/favicons.png" type="image/x-icon">
+    <script src="script/Chitietsanpham.js"></script>
+    <!-- <script src="script/jquery.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="header" id="top">
+        <div class="grid wide">
+            <nav class="row no-gutters">
+                <div class="header-logo l-4 m-4 c-5">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo" class="header-logo-image"></a>
+                </div>
+                <div class="header-search l-4 m-4 c-7">
+                    <div class="header-search-element">
+                        <input class="header-search-input" type="text" id="txtsearch" placeholder="Nhập từ khóa tìm kiếm"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+                        <!-- <button type="button" class="header-search-button" id="btnsearch">Tìm kiếm</button> -->
+                    </div>
+                    <div class="header-search-small">
+                        <input type="text" class="search-small-input"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+                    </div>
+                </div>
+                <div class="header-menuitem l-4 m-4 c-12">
+                    <div class="header-menuitem-list">
+                        <ul>
+                            <li>
+                                <!-- <i class="fas fa-cart-plus fa-2x "></i> -->
+                                <button type="submit" onclick="onCart()" style="font-size:16px;" id="cart">
+                                    <svg aria-hidden="true" data-prefix="fas" data-icon="cart-plus" class="svg-inline--fa fa-cart-plus fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM408 168h-48v-40c0-8.837-7.163-16-16-16h-16c-8.837 0-16 7.163-16 16v40h-48c-8.837 0-16 7.163-16 16v16c0 8.837 7.163 16 16 16h48v40c0 8.837 7.163 16 16 16h16c8.837 0 16-7.163 16-16v-40h48c8.837 0 16-7.163 16-16v-16c0-8.837-7.163-16-16-16z"></path></svg>
+                                    <span class="label-cart">Giỏ hàng</span>
+                                </button>
+                                <div id="myModal" class="modal">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Giỏ Hàng</h5>
+                                            <span class="close">&times;</span>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- <div class="cart-row">
+                                                <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                                                <span class="cart-price cart-header cart-column">Giá</span>
+                                                <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                                            </div> -->
+
+                                            <div class="cart-items">
+                                                <!--item trong giỏ hàng-->
+                                                <div class="modal-body">
+                                                    <div class="cart-row">
+                                                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                                                        <span class="cart-price cart-header cart-column">Giá</span>
+                                                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                                                    </div>
+                                                    <div class="cart-items" id="cart-add-item">
+                                                        <div class="cart-row">
+                                                            <div class="cart-item cart-column">
+                                                                <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000" width="100" height="100">
+                                                                <span class="cart-item-title">Mũi Hàn 500</span>
+                                                            </div>
+                                                            <span class="cart-price cart-column">25000đ</span>
+                                                            <div class="cart-quantity cart-column">
+                                                                <input class="cart-quantity-input" type="number" value="1">
+                                                                <button class="btn btn-danger" type="button">Xóa</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cart-row">
+                                                            <div class="cart-item cart-column">
+                                                                <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sp1-a45a32a1-38d4-4a8a-9c37-e936013858b2.jpg?v=1575877003000" width="100" height="100">
+                                                                <span class="cart-item-title">Máy Bơm Chìm Hộ Gia Đình QDX 1500W 220VAC 40L/1min H=8m</span>
+                                                            </div>
+                                                            <span class="cart-price cart-column">1599000đ</span>
+                                                            <div class="cart-quantity cart-column">
+                                                                <input class="cart-quantity-input" type="number" value="2">
+                                                                <button class="btn btn-danger" type="button">Xóa</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="cart-total">
+                                                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                                                            <span class="cart-total-price">3223000VNĐ</span>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cart-total">
+                                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                                <span class="cart-total-price">0VNĐ</span>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                                                <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <div class="navbar__link-separator"></div>
+                            <li class="header-menuitem-login" style="margin-top: 9px;">
+                                <a href="DangNhap.html">Đăng Nhập</a>
+                            </li>
+                            <div class="navbar__link-separator"></div>
+                            <li class="header-menuitem-login" style="margin-top: 9px;">
+                                <a href="DangKy.html">Đăng Ký</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+            </nav>
+            </div>
+    </header>
+    <nav class="nav">
+        <div class="grid wide">
+            <ul>
+                <li><a href="index.html"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>Trang chủ </a>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                </li>
+                <li><a>Apple</a><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></li>
+                <li><a href="DangKy.html">iPhone</a><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></li>
+                <li><a>iPhone 7 Plus</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="main-wide grid wide">
+            <div class="main-wide-label">
+                <h1>Điện thoại <strong>Apple iPhone 7 Plus - 32GB - Chính hãng VN/A</strong></h1>
+            </div>
+            <div class="main-head row no-gutters">
+                <div class="main-head-left l-7 m-6 c-12">
+                    <img src="images/apple/apple_iphone7plus_32gb.png">
+                </div>
+                <div class="main-head-right l-5 m-6 c-12">
+                    <div class="head-right-review">
+                        <h3>Chức năng chính <strong>Apple iPhone 7 Plus - 32GB - Chính hãng VN/A</strong></h3>
+                        <div class="right-review-prop">
+                            <p class="prop-p">
+                                <label class="prop-label">Hãng sản xuất</label>
+                                <span class="prop-span" id="hang">Apple - iPhone</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Kích thước màn hình</label>
+                                <span class="prop-span" id="kt">5,5 inch</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Độ phân giải màn hình</label>
+                                <span class="prop-span" id="pgiai">1080 1920 pixels</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Hệ điều hành</label>
+                                <span class="prop-span" id="hdh">iOS</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Chip xử lý(CPU)</label>
+                                <span class="prop-span" id="chip">Apple A10 Fusion</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">RAM</label>
+                                <span class="prop-span" id="ram">3GB</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Máy ảnh chính</label>
+                                <span class="prop-span" id="mayanh">2 Camera 12MP</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Bộ nhớ trong</label>
+                                <span class="prop-span" id="bonho">32 GB</span>
+                            </p>
+                            <p class="prop-p">
+                                <label class="prop-label">Dung lượng pin(mAh)</label>
+                                <span class="prop-span" id="dungluong">2900 mAh</span>
+                            </p>
+                            <button class="btn-cart">ĐẶT HÀNG ONLINE<br>(Giao hàng miễn phí toàn quốc, thanh toán khi nhận hàng)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="foot">
+        <div class="grid wide">
+            <div class="foot-cen row">
+                <div class="foot-element c-12 m-6 l-3">
+                    <i class="far fa-question-circle "></i><span style="margin-left: 5px;margin:8px 0 25px "> HỖ TRỢ - DỊCH VỤ</span>
+                    <ul style="padding: 0; ">
+                        <li>Hướng dẫn mua hàng</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Chính sách bảo hành</li>
+                        <li>Gửi phản hồi và ý kiến</li>
+                        <li>Mua hàng từ xa và nhận hàng</li>
+                    </ul>
+                </div>
+                <div class="foot-element c-12 m-6 l-3">
+                    <i class="fas fa-info-circle "></i><span style="margin-left: 5px; ">THÔNG TIN LIÊN HỆ</span>
+                    <ul class="foot-ul ">
+                        <li>
+                            <i class="fas fa-map-marker-alt "></i>
+                            <span style="margin-left: 8px; ">Đội 10, Thôn Phượng Hoàng, Xã Hùng Cường, TP. Hưng Yên</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-volume "></i>
+                            <span style="margin-left: 11px; ">0962437205 - 0924059295</span>
+                        </li>
+                        <li>
+                            <i class="far fa-envelope "></i>
+                            <span style="margin-left: 11px; "><a href="mailto:tuanphamacb05@gmail.com " style="text-decoration: none; "title="Liên hệ với chúng tôi qua mail ">tuanphamacb05@gmai.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot-element c-12 m-6 l-3">
+                    <i class="fas fa-shopping-cart "></i>
+                    <span>THANH TOÁN MIỄN PHÍ</span>
+                    <img src="images/masterCard.jpg " style="width: 93%;height: 106px;margin-top:25px " class="foot-pay">
+                </div>
+                <div class="foot-element c-12 m-6 l-3">
+                    <h6 style="font-size: 20px;font-weight: 700;margin: 0px 0 25px;">Theo dõi chúng tôi</h6>
+                    <p style="font-size: 15px;">Nhập email để nhận những thông tin hữu ích </p>
+                    <input type="text" placeholder="Email của bạn..." value="" class="foot-input">
+                    <button class="foot-btn">ĐĂNG KÝ</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị</title>
+    <link rel="stylesheet" href="../Admin/QL_NguoiDung.css">
+    <script src="https://kit.fontawesome.com/d6d4f530bc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../Assests/Trangchu.html">
+                    <!--img src="../img/anhdoan/anhlogo01.jpg" style="with:1%;"-->
+                </a>
+            </div>
+            <div class="ad">
+                <i class="fas fa-user"></i>
+                <span>Anh Nguyễn</span>
+                <!--i class="fas fa-chevron-down"></i-->
+            </div>
+        </div>
+    </header>
+    <nav class="leftmenu" style="height: 1000px;">
+        <div class="avatar">
+            <img src="../img/anhdoan/hi.jpg" alt="Avata">
+            <div class="avatarName"> <br>
+                <i>Anh Nguyễn</i>
+            </div>
+        </div>
+        <ul>
+            <li class="">
+                <a href="../Assests/Trangchu.html">
+                    <i class="fa fa-dashboard"></i><span>Trang chủ</span>
+                </a>
+            </li>
+            <li id="quanLySanPham" onclick="hien($(this).attr('id'))"><a href="../Admin/QuanTri.html"><i class="fas fa-qrcode"></i>Quản lý Sản Phẩm</li>
+
+            <!--li id="quanLyDonHang" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Đơn Hàng</li-->
+            <li id="thongKeDoanhThu" onclick="hien($(this).attr('id'))"><i class="fas fa-stream"></i>Thống kê doanh thu</li>
+            <!--li id="quanLyLoaiThucDon" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Thực Đơn</li-->
+            <!--li id="quanLyNguyenLieu" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Nguyên Liệu</li-->
+            <!--li id="quanLyLoaiNguyenLieu" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Nguyên Liệu</li-->
+            <!--li id="quanLyThongTin" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Thông Tin</li-->
+            <!--li id="quanLyLoaiThongTin" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Loại Thông Tin</li-->
+            <li id="quanLyKhachhang" onclick="hien($(this).attr('id'))"><i class="fas fa-link"></i>Quản lý Khách Hàng</li>
+            <li id="quanLyDangxuat" onclick="hien($(this).attr('id'))">
+                <a href="../Admin/AminDangNhap.html"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <div class="col-10">
+        <div class="ql">
+            <h1 style="float: left;font-size: 25px; color: rgba(27, 25, 25, 0.911); margin: 15px 30px 30px 30px;"> Quản Lý Khách Hàng</h1>
+            <div class="search">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm ...">
+                <span><button class="add" style="width: 90px;height: 27px; background-color: rgba(201, 45, 45, 0.774); margin-top: -10px;">Thêm</button></span>
+                </button><br>
+                <script>
+                </script>
+            </div>
+
+            <div id="bgaddRow">
+                <div id="addRow">
+                    <i class="fa fa-times-circle-o fa-3x add" aria-hidden="true"></i> STT: <br>
+                    <input type="text" name="" id="stt"><br> Mã người dùng: <br>
+                    <input type="text" name="" id="ma"><br> Tên người dùng: <br>
+                    <input type="text" name="" id="hoten"><br> Giới tính: <br>
+                    <input type="text" name="" id="gt"><br> Địa chỉ: <br>
+                    <input type="text" name="email" id="dc"><br> số điện thoại <br>
+                    <input type="text" name="email" id="sdt"><br>
+
+                    <br>
+
+                    <button onclick="addRow();">Thêm</button>
+
+
+                </div>
+            </div>
+            <div id="EditTB">
+                <div id="addRow">
+                    <i class="fa fa-times-circle-o fa-3x update" aria-hidden="true"></i> STT: <br>
+                    <input type="text" name="stt" id="stt"><br> Mã ND: <br>
+                    <input type="text" name="ma" id="ma"><br> Tên ND: <br>
+                    <input type="text" name="hoten" id="hoten"><br> Giới tính: <br>
+                    <input type="text" name="gt" id="gt"><br> Địa chỉ: <br>
+                    <input type="text" name="dc" id="dc"><br><br> Số điện thoại: <br>
+                    <button onclick="editRow();">Sửa</button>
+
+
+                </div>
+            </div>
+
+
+            <table id="table" border="2" cellspacing="1" width="1000px">
+                <tbody>
+                    <tr class="first">
+                        <th>STT</th>
+                        <th>MÃ ND</th>
+                        <th>TÊN NGƯỜI DÙNG</th>
+                        <th>GIỚI TÍNH</th>
+                        <th>ĐỊA CHỈ</th>
+                        <th>SÓ ĐIỆN THOẠI</th>
+                        <th colspan="2">THAO TÁC</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ND1</td>
+                        <td>Nguyễn Hải Nam</td>
+                        <td>Nam</td>
+                        <td>Khoái Châu - Hưng Yên</td>
+                        <td>0969165157</td>
+                        <td><input class="update" type="button" name="" value="Sửa"></td>
+                        <td><input class="Del" type="button" name="" value="Xóa" onclick="deleteR(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ND2</td>
+                        <td>Nguyễn Thị Lan Anh</td>
+                        <td>Nữ</td>
+                        <td>Yên Mỹ - Hưng Yên</td>
+                        <td>0965888999</td>
+                        <td><input class="update" type="button" name="" value="Sửa"></td>
+                        <td><input class="Del" type="button" name="" value="Xóa" onclick="deleteR(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ND3</td>
+                        <td>Nguyễn Hoài Anh</td>
+                        <td>Nữ</td>
+                        <td>Văn Lâm - Hưng Yên</td>
+                        <td>0965123654</td>
+                        <td><input class="update" type="button" name="" value="Sửa"></td>
+                        <td><input class="Del" type="button" name="" value="Xóa" onclick="deleteR(this)"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ND4</td>
+                        <td>Trần Thị Diệu Linh</td>
+                        <td>Nữ</td>
+                        <td>Thái Bình</td>
+                        <td>0965654777</td>
+                        <td><input class="update" type="button" name="" value="Sửa"></td>
+                        <td><input class="Del" type="button" name="" value="Xóa" onclick="deleteR(this)"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <script type="text/javascript" language="javascript">
+                function xoa(cr7) {
+                    var i = confirm("Bạn chắc muốn xóa không?");
+                    if (i == true) {
+                        var i = cr7.parentNode.parentNode.rowIndex;
+                        document.getElementById("table").deleteRow(i);
+                    }
+                }
+            </script>
+            <!--   end Xóa P -->
+
+
+            <!-- Sửa P -->
+            <script>
+                $('.openCloseCart').click(function() {
+                    $('#shoppingCart').toggle();
+                });
+            </script>
+            <script>
+                // get selected row
+                // display selected row data in text input
+
+                var table = document.getElementById("table"),
+                    rIndex;
+
+                for (var i = 1; i < table.rows.length; i++) {
+                    table.rows[i].onclick = function() {
+                        rIndex = this.rowIndex;
+                        console.log(rIndex);
+
+                        document.getElementById("stt").value = this.cells[0].innerHTML;
+                        document.getElementById("ma").value = this.cells[1].innerHTML;
+                        document.getElementById("hoten").value = this.cells[2].innerHTML;
+                        document.getElementById("gt").value = this.cells[3].innerHTML;
+                        document.getElementById("dc").value = this.cells[4].innerHTML;
+                    };
+                }
+
+
+                // edit the row
+                function editRow() {
+                    table.rows[rIndex].cells[0].innerHTML = document.getElementById("stt").value;
+                    table.rows[rIndex].cells[1].innerHTML = document.getElementById("ma").value;
+                    table.rows[rIndex].cells[2].innerHTML = document.getElementById("hoten").value;
+                    table.rows[rIndex].cells[3].innerHTML = document.getElementById("gr").value;
+                    table.rows[rIndex].cells[4].innerHTML = document.getElementById("dc").value;
+                }
+            </script>
+            <!--end Sửa P -->
+
+
+
+
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+
+
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('#example1').DataTable()
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,738 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    margin-top: 9px;
+    margin-left: 60px;
+}
+
+
+/*------------Menu-----------------------*/
+
+
+/*---------------------------------------*/
+
+html {
+    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /*kiểu chữ cho cả trang*/
+    font-size: 15px;
+    color: black;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    height: 50%;
+    box-sizing: border-box;
+    margin-top: -60px;
+}
+
+.menu__item a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    /*padding: 0px 20px;*/
+    /*padding: -50px 0;*/
+    transition: border-bottom 0.3s ease-in-out;
+    font-size: 130%;
+    font-weight: 400;
+}
+
+.nav li a {
+    font-weight: 900;
+    color: rgb(141, 113, 113);
+}
+
+.menu {
+    /*color:rgb(207, 195, 179);*/
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    margin-top: -1.60cm;
+    padding: 0px 10%;
+}
+
+.menu li a:hover,
+.menu li a:active {
+    border-bottom: 2px solid rgb(141, 113, 113);
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu__item {
+    z-index: 1;
+    position: relative;
+    line-height: 40px;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.menu-con {
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    /*border: solid 2px rgb(209, 181, 181);*/
+    background-color: #ebe2e2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.item-con {
+    display: block;
+}
+
+.item-con a {
+    display: block;
+    color: rgb(119, 117, 117);
+    padding: 0px 10px;
+}
+
+.menu__item:hover .menu-con {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*----------------------------------------*/
+
+
+/*--------------------HEADER----------------*/
+
+
+/*---------------------------------------*/
+
+header {
+    /*background-color: #d3b995;*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*background-image: linear-gradient(#D8C3A5, #ad8784);*/
+
+
+/*background-image: linear-gradient(#D8C3A5, #ad8784);*/
+
+
+/*----phần logo-----*/
+
+.logo {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*-----------Đăng nhập vs giỏ hàng----------*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    /*xóa chấm đen mặc định*/
+    margin-right: 30px;
+    margin-top: -2.5cm;
+}
+
+
+/* khi click chuột thì có gạch chân*/
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid rgb(141, 113, 113);
+}
+
+.main-nav li a {
+    text-decoration: none;
+    /*đường kẻ mặc định ở chân*/
+    color: rgb(141, 113, 113);
+    font-size: 120%;
+    font-weight: 500;
+    transition: border-bottom 0.3s ease-in-out;
+    /*độ nhanh chậm chuyển cảnh*/
+    padding: 3px 0;
+    font-weight: 600;
+}
+
+.main-nav li {
+    display: inline-block;
+    /*hiển thị trên cùng 1 hàng*/
+    margin-right: 40px;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+/*---------Thanh tìm kiếm -------------*/
+
+
+/*------------------------------------*/
+
+.search {
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    width: 350px;
+    border: none;
+    /*độ đậm nhạt khung tìm kiếm*/
+    color: rgb(167, 145, 145);
+    outline: none;
+}
+
+.Email {
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid;
+    width: fit-content;
+    padding: 0px 15px;
+    margin-right: 5%;
+    margin-bottom: 70px;
+}
+
+.btn7 {
+    padding: 5px;
+    border-radius: 1px;
+    position: relative;
+}
+
+
+/*---------menu---------*/
+
+
+/*---------------------*/
+
+.container-section {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    height: 900%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.item {
+    background: rgb(139, 100, 100);
+    margin: 100px;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+/*------trang chủ------------------*/
+
+
+/*---------------------------------*/
+
+.conter {
+    width: 100%;
+    text-align: center;
+}
+
+.trangchu {
+    margin-top: -5px;
+    background: rgb(172, 169, 169);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+}
+
+#nav-arrow {
+    font-size: 10px;
+    color: black;
+}
+
+.trangchu-con li {
+    margin-top: 13px;
+}
+
+.trangchu-con li a {
+    text-decoration: none;
+    color: rgb(63, 56, 56);
+    font-size: 15PX;
+}
+
+.trangchu-con li a:hover,
+.trangchu-con li a:active {
+    border-bottom: 2px solid rgb(141, 113, 113);
+}
+
+
+/*ảnh sản phẩm*/
+
+
+/*--------------*/
+
+#SanPham {
+    background-color: #FFF;
+    text-align: center;
+    float: left;
+    max-width: 19cm;
+    margin-left: 3.5cm;
+}
+
+body {
+    position: relative;
+}
+
+
+/*----------chi tiết sản phẩm-----*/
+
+
+/*--------------------------------*/
+
+.chitietspdam {
+    width: 80%;
+    position: relative;
+    margin-left: 55%;
+}
+
+.chitietspdam .chitiet1 {
+    list-style-type: none;
+}
+
+.chitietspdam .chitiet1 .gia {
+    font-size: 25px;
+    color: rgba(197, 29, 29, 0.719);
+}
+
+.chitiet1 li {
+    color: rgba(77, 67, 67, 0.76);
+    font-size: 17px;
+}
+
+.Gioithieu {
+    min-height: 1px;
+    text-align: center;
+    float: left;
+    margin-left: 15px;
+}
+
+.content__number {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/*---chỉnh phần ưu đãi---*/
+
+
+/*phần ưu đãi*/
+
+.btn__input {
+    width: 40px;
+}
+
+.select__number {
+    margin-top: 50px;
+}
+
+.btn {
+    border: solid 1px #ccc;
+    padding: 6px 12px;
+    outline: none;
+    /*width: 35px;*/
+}
+
+.phan-duoi {
+    margin-top: 210px;
+    background: rgb(172, 169, 169);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+}
+
+.duoi-1 {
+    padding-top: 10px;
+    /* font-size: 18px;*/
+}
+
+p {
+    padding: 10px;
+    padding-right: 10px;
+}
+
+
+/*----------------------------*/
+
+
+/*------------------------------*/
+
+
+/* phần cuối*/
+
+#footer {
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    text-align: center;
+    margin-top: -79px;
+}
+
+
+/*.information {
+    font-size: 18px;
+    list-style: none;
+}
+
+
+/*.information {
+        list-style: none;
+        color: rgb(56, 54, 54);
+        line-height: 100%;
+        margin-top: -1%;
+        word-spacing: 1px;
+    }*/
+
+
+/*.information li {
+    color: rgb(56, 54, 54);
+}
+
+
+/*.information.li:hover,
+    .information.li:active {
+        transform: scale(1.3);
+    }*/
+
+
+/*.sp-banner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.sp-banner .banner {
+    height: 100%;
+}
+
+.sp-banner .banner img {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.banner-con {
+    FONT-SIZE: 17px;
+    color: #553d3dcf;
+}
+
+.sp-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}*/
+
+.wrapper {
+    margin-top: -10px;
+    background-color: rgb(172, 169, 169);
+    padding-bottom: 100px;
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*.wrapper-item {
+    display: flex;
+    align-items: center;
+}*/
+
+.info h3 {
+    padding-top: 50px;
+    /* width: 100%;
+    display: block; */
+}
+
+.wrapper li a {
+    text-decoration: none;
+    color: rgb(70, 40, 40);
+    display: block;
+}
+
+.info-con span {
+    margin-left: 10px;
+}
+
+.wrapper li {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.info-con li a:hover,
+.info-con li a:active {
+    /*border-bottom: 2px solid rgb(83, 51, 51);*/
+    color: white;
+    transform: scale(1.1);
+}
+
+.info-con li a {
+    padding: 1px 0;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+
+
+/*------chính sách-----*/
+
+.policy h3 {
+    padding-top: 50px;
+}
+
+.policy li a {
+    text-decoration: none;
+    color: rgb(70, 40, 40);
+}
+
+.policy>li {
+    list-style: none;
+}
+
+.policy>li a {
+    transition: all 0.4s;
+}
+
+.policy li a:hover,
+.policy li a:active {
+    /*border-bottom: 2px solid rgb(83, 51, 51);*/
+    color: white;
+    transform: scale(1.1);
+}
+
+.policy li a {
+    padding: 1px 0;
+    font-weight: 500;
+}
+
+
+/*--- chỉnh Sam boutique---- */
+
+.about h3 {
+    padding-top: 50px;
+}
+
+.about li a {
+    text-decoration: none;
+    color: rgb(70, 40, 40);
+}
+
+.about>li {
+    list-style: none;
+}
+
+.about>li a {
+    transition: all 0.4s;
+}
+
+.about li a:hover,
+.about li a:active {
+    /*border-bottom: 2px solid rgb(83, 51, 51);*/
+    color: white;
+    transform: scale(1.1);
+}
+
+.about li a {
+    padding: 1px 0;
+    font-weight: 500;
+}
+
+.copylink {
+    background-color: rgb(172, 169, 169);
+}
+
+.copylink p {
+    color: rgb(63, 49, 49);
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*-------------Đặt mua----------*/
+
+
+/*----------------------------*/
+
+.btn1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183 51%, #EC6F66 100%);
+    color: white;
+    padding: 10px 3px;
+    width: 102px;
+    text-align: center;
+    font-size: 98%;
+    font-weight: 700;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    position: absolute;
+    top: 15px;
+}
+
+
+/*khi click cho qua thì đổi màu*/
+
+.btn1:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* --------chỉnh đặt mua vs mua ngay --------*/
+
+.TTBTN {
+    position: relative;
+    height: 100px;
+    width: 250px;
+    position: absolute;
+    top: 430px;
+    /*left: 0.1%;*/
+}
+
+
+/*-----------------Mua ngay-------------*/
+
+
+/*------------------------------------*/
+
+.btn2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183 51%, #EC6F66 100%);
+    color: white;
+    padding: 10px 3px;
+    width: 102px;
+    text-align: center;
+    font-size: 98%;
+    font-weight: 700;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    position: absolute;
+    top: 15px;
+    left: 112px;
+}
+
+.btn2:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*----------------------------*/
+
+
+/*chỉnh */
+
+.TTTH {
+    margin-left: 10px;
+}
+
+
+/*-------chỉnh số lượng--------*/
+
+
+/*---------------------------*/
+
+.TTT {
+    font-weight: 900;
+}
+
+.hihi {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.select__number-content button {
+    width: 43px;
+    height: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #EC6F66 0%, #F3A183 51%, #EC6F66 100%);
+    border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+
+/*---khi click chuột qua thì đổi màu */
+
+.select__number-content button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*chỉnh icon fa,you,instra*/
+
+.thongtin ul li a i {
+    font-weight: 900;
+    font-size: 150%;
+    transition: all 0.2s;
+}
+
+.thongtin ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.thongtin ul li a i:hover {
+    transform: scale(1.3);
+    color: black;
+}

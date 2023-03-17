@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trang chủ</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--chèn link icon -->
+    <link rel="stylesheet" type="text/css" href="../css/Trangchu.css">
+    <script src="https://kit.fontawesome.com/6d9e8c4e41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="box">
+            <a href="#"><img class="logo" src="../img/anhdoan/anhlogo01.jpg" alt="logo"></a>
+            <div class="Email">
+                <button onclick="myFunction()" class="dropbtn"><input class="search" type="text" placeholder="Tìm Kiếm..." id="myInput" onkeyup="filterFunction()"></button>
+                <a href="#" class="btn7"><i class="fas fa-search"></i></a>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../Assests/Soccaro.html">Quần Dài Ống Sọc Caro</a>
+                    <a href="../Assests/Damtayphong.html">Đần Xòe cúp ngực tay phồng</a>
+                    <a href="../Assests/XeplyHQ.html">Chân váy xếp ly hàn quốc</a>
+
+                </div>
+            </div>
+            <script>
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                function filterFunction() {
+                    var input, filter, ul, li, a, i;
+                    input = document.getElementById("myInput");
+                    filter = input.value.toUpperCase();
+                    div = document.getElementById("myDropdown");
+                    a = div.getElementsByTagName("a");
+                    for (i = 0; i < a.length; i++) {
+                        txtValue = a[i].textContent || a[i].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            a[i].style.display = "";
+                        } else {
+                            a[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <ul class="main-nav">
+                <li><a href="../Assests/Giohang.html"><i class="fas fa-shopping-cart"></i>  Giỏ hàng </a></li>
+                <li class="contact-item">
+                    <a href="../Assests/dangnhap.html" class="icon_user">
+                        <i class="fas fa-user-friends"></i>
+                        <span> Đăng nhập</span>
+                    </a>
+                    <a href="../Assests/dangky.html">/Đăng ký</a>
+
+                    <!--a href="../Admin/QuanTri.html">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Admin</span>
+                    </a-->
+                </li>
+            </ul>
+        </div>
+
+        <div class="clearfix"></div>
+        <ul class="container">
+            <div class="nav">
+                <ul class="menu">
+
+                    <li class="menu__item">
+                        <a href="../Assests/Hangmoi.html">HÀNG MỚI  </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../Assests/Dam.html">ĐẦM  <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-con">
+                            <li class="item-con">
+                                <a href="#">Đầm xòe</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Đầm suông</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Đầm ôm</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../Assests/Ao.html">ÁO  <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-con">
+                            <li class="item-con">
+                                <a href="#">Áo sơ mi</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Áo vest</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Áo thun</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../Assests/Quan.html">QUẦN  <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-con">
+                            <li class="item-con">
+                                <a href="#">Quần lửng</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Quần dài</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../Assests/Chanvay.html">CHÂN VÁY  <i class="fas fa-angle-down"></i></a>
+                        <ul class="menu-con">
+                            <li class="item-con">
+                                <a href="#">Chân váy chữ A</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Chân váy bút chì</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Chân váy xếp ly</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Chân váy xòe</a>
+                            </li>
+                            <li class="item-con">
+                                <a href="#">Chân váy giả quần</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </ul>
+    </header>
+
+
+    <div class="w3-content ">
+        <img class="mySlides" src="../img/anhdoan/anhbiadoan/anhbia06.jpg" style="width:100%">
+        <img class="mySlides" src="../img/anhdoan/anhbiadoan/anhbia01.1.jpg" style="width:100%">
+        <img class="mySlides" src="../img/anhdoan/anhbiadoan/anhbia02.2.jpg" style="width:100%">
+        <img class="mySlides" src="../img/anhdoan/anhbiadoan/anhbia05.jpg" style="width:100%">
+        <div class="btn__slide">
+            <button class="prev btn" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="next btn" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <!--div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div-->
+        <script src="../js/Trangchu.js"></script>
+    </div>
+
+    <div id="content">
+        <div class="row">
+            <div id="main">
+                <h2 class="main-sale">SẢN PHẨM BÁN CHẠY</h2>
+                <div class="sp-banner">
+                    <div class="banner">
+                        <img src="../img/anhdoan/anhcut-out.jpg" alt="product" style="width: 100%;height: 90%;">
+                        <div class="banner-con">
+                            <h2>SAM BOUTIQUE-CUT OUT</h2>
+                            <p>Những đường cắt xẻ biến hóa vùng eo tinh tế cho đến vùng ngực và hở lưng đầy táo bạo giúp phái nữ khoe khéo những điểm gợi cảm trên cơ thể, mang đến vẻ đẹp quyến rũ và duyên dáng.</p>
+                        </div>
+                    </div>
+                    <div class="sp-container">
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Carovang.html">
+                                    <img class="product-img" src="../img/anhdoan/Quần/quancaro.jpg" width="100%">
+                                </a>
+                                <!--label class="product-price">490.000 đ</label-->
+                                <div class="product__content">
+                                    <label class="product-name">Quần Caro Ống Rộng</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">138.000 đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'01',image:'../img/anhdoan/Quần/quancaro.jpg', price:138000, name:'Quần Caro Ống Rộng'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Aovest.html">
+                                    <img class="product-img" src="../img/anhdoan/Áo/aovesttaylo.png">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Áo vest nữ tay lỡ trắng ngoại</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">750.000 đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'02',image:'../img/anhdoan/Áo/aovesttaylo.png', price:750000, name:'Áo vest nữ tay lỡ trắng ngoại'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Somitrang.html">
+                                    <img class="product-img" src="../img/anhdoan/Áo/aosomidieu.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Áo sơ mi nữ điệu đà</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">500.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'03',image:'../img/anhdoan/Áo/aosomidieu.jpg', price:500000, name:'Áo sơ mi nữ điệu đà'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Aotanktop.html">
+                                    <img class="product-img" src="../img/anhdoan/Áo/aotanktop.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Áo tanktop the non chữ ngực</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">80.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'04',image:'../img/anhdoan/Áo/aotanktop.jpg', price:80000, name:'Áo tanktop the non chữ ngực'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="main-sale">SẢN PHẨM NỔI BẬT</h2>
+                <div class="sp-banner">
+                    <div class="sp-container">
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/XeplyHQ.html">
+                                    <img class="product-img" src="../img/anhdoan/Chân váy/chanvayxeply.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Chân váy xếp ly phong cách Hàn Quốc</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">160.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'05',image:'../img/anhdoan/Chân váy/chanvayxeply.jpg', price:160000, name:'Chân váy xếp ly phong cách Hàn Quốc'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Xengan.html">
+                                    <img class="product-img" src="../img/anhdoan/Chân váy/chanvaychua.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Chân váy chữ A xẻ ngắn lưng cao</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">120.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'06',image:'../img/anhdoan/Chân váy/chanvaychua.jpg', price:120000, name:'Chân váy chữ A xẻ ngắn lưng cao'})"  class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Ongrongcapcao.html">
+                                    <img class="product-img" src="../img/anhdoan/Quần/quannuongrong.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Quần jean nữ ống rộng cạp cao</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">128.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'07',image:'../img/anhdoan/Quần/quannuongrong.jpg', price:128000, name:'Quần jean nữ ống rộng cạp cao'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sp__item">
+                            <div class="product">
+                                <a href="../Assests/Vayhoanhibody.html">
+                                    <img class="product-img" src="../img/anhdoan/Đầm/damhoanhibody.jpg">
+                                </a>
+                                <div class="product__content">
+                                    <label class="product-name">Váy hoa nhí body đuôi cá</label>
+                                    <br>
+                                    <label><s></s></label><label class="product-price">480.000 Đ</label>
+                                    <br>
+                                    <input onclick="addToCart({id:'08',image:'../img/anhdoan/Đầm/damhoanhibody.jpg', price:480000, name:'Váy hoa nhí body đuôi cá'})" class="btn-buy" type="button" value="ĐẶT MUA" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="banner">
+                        <img src="../img/anhdoan/anhsuit.jpg" alt="product" style="width: 100%;height: 90%;">
+                        <div class="banner-con">
+                            <h2>SAM BOUTIQUE-SUIT</h2>
+                            <p>Với thiết kế tinh tế, tỉ mẩn thể hiện sự sang trọng Suit được lựa chọn như một biểu tượng thời trang mới chốn công sở đại diện cho phong cách lịch lãm và kín đáo, không chỉ vậy mà Suit cũng rất phù hợp với những cô nàng cá
+                                tính, mạnh mẽ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="phan-duoi">
+                <div class="duoi-1">
+                    <h3>Miễn phí giao hàng</h3>
+                    <p style="font-size:15px;">Áp dụng với hóa đơn từ 800.000 đ</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>30 ngày đổi sản phẩm</h3>
+                    <p style="font-size:15px;"> Áp dụng với sản phẩm nguyên giá</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>Ưu đãi hấp dẫn</h3>
+                    <p style="font-size:15px;">Quyền lợi đặc biệt với KH VIP</p>
+                </div>
+                <div class="duoi-1">
+                    <h3>Hotline</h3>
+                    <p style="font-size:15px;">Mua hàng Online: 0366724895</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="wrapper">
+        <div class="wrapper-item">
+            <div class="info">
+                <h3>THÔNG TIN CHUNG</h3>
+            </div>
+            <diV class="info-con">
+                <li><a href="#"><i class="fas fa-home"></i><span>Yên Mỹ, Hưng Yên </span></a></li>
+                <li><a href="#"><i class="fas fa-phone"></i><span>0366378957</span> </a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i><span>hoai19112001anh@gmail.com</span></a></li>
+            </div>
+            <div class="thongtin">
+                <ul>
+                    <li><a href="#"><i style="color: rgb(58, 58, 211);" class="fab fa-facebook-square small-icons"></i></a></li>
+                    <li><a href="#"><i style="color: red;" class="fab fa-youtube small-icons"></i></a></li>
+                    <li><a href="#"><i style="color: rgba(180, 20, 28, 0.699);" class="fab fa-instagram-square small-icons"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="policy">
+            <h3>CHÍNH SÁCH</h3>
+            <li><a href="../Assests/Phuongthuctt.html" style="font-size:17px;"> Phương thức thanh toán</a></li>
+            <li><a href="../Assests/Huongdanmuahang.html" style="font-size:17px;">Hướng dẫn mua hàng</a></li>
+            <li><a href="../Assests/Tra.html" style="font-size:17px;">Chính sách đổi trả và hoàn tiền</a></li>
+            <li><a href="../Assests/Baohanh.html" style="font-size:17px;">Chính sách bảo hành</a></li>
+        </div>
+        <div class="about">
+            <h3>SAM BOUTIQUE</h3>
+            <li><a href="../Assests/Gioithieu.html" style="font-size:17px;">Giới thiệu</a></li>
+            <li><a href="#" style="font-size:17px;">Liên hệ</a></li>
+            <li><a href="../Assests/Hoptac.html" style="font-size:17px;">Hợp tác kinh doanh</a></li>
+        </div>
+    </div>
+    <div class="copylink">
+        <p>"Facebook:" <a href="https://www.facebook.com/nguyenthihoai12345" style="color:rgb(146, 108, 93)">https://www.facebook.com/nguyenthihoai12345</a></p>
+    </div>
+
+
+
+    <script>
+        function  addToCart(item) {    
+             item.quantity = 1;
+             console.log(item.quantity);
+             var list;
+             if (localStorage.getItem('cart') == null) {
+                 list = [item];
+             } else {
+                 list = JSON.parse(localStorage.getItem('cart')) || [];
+             let ok = true;
+             for (let x of list) {
+                 if (x.id == item.id) {
+                 x.quantity += 1;
+                 ok = false;
+                 break;
+                 }
+             }
+             if(ok){
+                 list.push(item); 
+             } 
+             }
+             localStorage.setItem('cart', JSON.stringify(list));
+             alert("Đã thêm giở hàng thành công");
+         }
+    </script>
+</body>
+
+</html>
